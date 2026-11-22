@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação Técnica — Fundamentos de Git</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>Fundamentos de Git</header>
+    <a class="nav-link" href="#O_que_e_Git">O que é Git</a>
+    <a class="nav-link" href="#Instalacao">Instalação</a>
+    <a class="nav-link" href="#Comandos_Basicos">Comandos básicos</a>
+    <a class="nav-link" href="#Branches">Branches</a>
+    <a class="nav-link" href="#Boas_Praticas">Boas práticas</a>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="O_que_e_Git">
+      <header>O que é Git</header>
+      <p>Git é um sistema de controle de versão distribuído criado por Linus Torvalds em 2005.</p>
+      <p>Ele permite rastrear alterações no código e colaborar com outras pessoas de forma segura.</p>
+      <p>Diferente de sistemas centralizados, cada desenvolvedor tem uma cópia completa do histórico.</p>
+      <code>git --version</code>
+    </section>
+
+    <section class="main-section" id="Instalacao">
+      <header>Instalação</header>
+      <p>A instalação varia conforme o sistema operacional utilizado.</p>
+      <p>No Linux, geralmente basta usar o gerenciador de pacotes da distribuição.</p>
+      <ul>
+        <li>Debian/Ubuntu: <code>sudo apt install git</code></li>
+        <li>Fedora: <code>sudo dnf install git</code></li>
+        <li>macOS: <code>brew install git</code></li>
+      </ul>
+      <p>Após instalar, configure seu nome e e-mail:</p>
+      <code>git config --global user.name "Seu Nome"</code>
+      <code>git config --global user.email "voce@email.com"</code>
+    </section>
+
+    <section class="main-section" id="Comandos_Basicos">
+      <header>Comandos básicos</header>
+      <p>Estes são os comandos mais usados no dia a dia com Git.</p>
+      <ul>
+        <li><code>git init</code> — inicializa um repositório</li>
+        <li><code>git add</code> — adiciona arquivos ao stage</li>
+        <li><code>git commit</code> — registra as alterações</li>
+      </ul>
+      <p>Um fluxo típico de commit:</p>
+      <code>git add .</code>
+      <code>git commit -m "mensagem"</code>
+    </section>
+
+    <section class="main-section" id="Branches">
+      <header>Branches</header>
+      <p>Branches permitem desenvolver funcionalidades isoladamente.</p>
+      <p>A branch principal costuma se chamar <code>main</code> ou <code>master</code>.</p>
+      <ul>
+        <li><code>git branch nova-branch</code> — cria uma branch</li>
+        <li><code>git checkout nova-branch</code> — alterna para ela</li>
+      </ul>
+      <code>git checkout -b feature/login</code>
+    </section>
+
+    <section class="main-section" id="Boas_Praticas">
+      <header>Boas práticas</header>
+      <p>Commits pequenos e descritivos facilitam a revisão de código.</p>
+      <p>Nunca faça commit de segredos como senhas ou chaves de API.</p>
+      <p>Use um arquivo <code>.gitignore</code> para excluir arquivos desnecessários.</p>
+      <code>echo "node_modules/" &gt;&gt; .gitignore</code>
+    </section>
+
+  </main>
+
+</body>
+</html>
